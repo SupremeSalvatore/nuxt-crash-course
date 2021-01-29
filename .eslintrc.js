@@ -14,5 +14,8 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "no-trailing-spaces":[0, { "skipBlankLines": true }],
+    "eol-last":0
+  }
 }
