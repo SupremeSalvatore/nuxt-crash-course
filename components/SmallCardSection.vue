@@ -1,13 +1,13 @@
 <template>
-    <div class="container">
-        <h3 class="header">{{ cardsSection.title }}</h3>
-        <div class="card-container">
-            <SmallCard 
-                v-for="card in cardsSection.cards"
-                :key="card.id"
-                :card="card"
-            />
-        </div>
+    <div class="mt-2">
+        <h3>{{ cardsSection.title }}</h3>
+        <b-row>
+          <b-col class="card-img" cols="12" md="3" v-for="card in cardsSection.cards"
+                :key="card.id">
+        <SmallCard :card="card"/>
+          </b-col>
+        </b-row>
+            
     </div>
 </template>
 
@@ -18,17 +18,9 @@
 </script>
 
 <style scoped>
-    .container {
-        padding: 2rem 0
-    }
-    .header {
-        font-weight: 700;
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
-    .card-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+.card-img{
+        max-height: 12.5rem;
+        overflow: hidden;
+        padding:10px 5px;
+}
 </style>

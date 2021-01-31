@@ -1,6 +1,6 @@
 <template>
-    <NuxtLink :to="`/products/${card.id}`" class="card-container">
-        <img class="image" :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)" alt="">
+    <NuxtLink :to="`/products/${card.id}`">
+        <b-img rounded fluid :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)" :alt="card.image"/>
     </NuxtLink>
 </template>
 
@@ -11,7 +11,7 @@
 </script>
 
 <style scoped>
-    .card-container {
+    /* .card-container {
         width: 24%;
         height: 12.5rem;
         border-radius: 0.5rem;
@@ -22,5 +22,5 @@
     .image {
         width: 100%;
         height: 100%
-    }
+    } */
 </style>

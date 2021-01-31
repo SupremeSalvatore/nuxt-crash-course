@@ -1,11 +1,22 @@
 <template>
-  <NuxtLink :to="`products/${card.id}`" class="card">
-      <img class="image" :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)" alt="">
-      <h3 class="header">{{ card.title }}</h3>
-      <p class="snippet">
-          {{card.snippet }}
-      </p>
-  </NuxtLink>
+  <b-col cols="12" md="4">
+    <b-card
+    :title="card.title"
+    :img-src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)"
+    :img-alt="card.image"
+    img-top
+    tag="article"
+    style="min-height: 500px"
+    class="mb-2"
+    >
+      <b-card-text>
+         {{card.snippet }}
+      </b-card-text>
+      <template #footer >
+        <b-button  :to="`products/${card.id}`" variant="primary">See Product</b-button>
+      </template>
+    </b-card>
+  </b-col>
 </template>
 
 <script>
@@ -15,23 +26,7 @@
 </script>
 
 <style scoped>
-    .card {
-        width: 31.5%;
-        height: 25rem;
-        border: none;
-        overflow: hidden;
-        padding: 0;
-        cursor: pointer;
-    }
-    .image {
-        height: 65%;
-        border-radius: 0.5rem;
-    }
-    .header {
-        font-size: 1.15rem;
-        margin-top: 0.4rem;
-    }
-    .snippet {
-        color: grey
-    }
+  .card-img-top{
+    height:275px;
+  }
 </style>

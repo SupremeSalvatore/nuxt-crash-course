@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="mt-5">
         <LargeCardSection
             v-for="cardInfo in largeCardSections.slice(0,1)"
             :key="cardInfo.id"
