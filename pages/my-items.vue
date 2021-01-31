@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <!-- <MyItem 
+        <MyItem 
             v-for="rental in myRentals"
             :key="rental.id"
             :item="rental"
-        /> -->
+        />
     </div>
 </template>
 
